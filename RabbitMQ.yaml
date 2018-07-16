@@ -1,0 +1,23 @@
+# rabbitmq server
+rabbitmq:
+    uri: amqp://test:test@127.0.0.1:5672/      #product
+    consumerTag: consumer
+    num: 1
+    exchange:
+        - name: test.test1
+          type: fanout
+    queue:
+        - name: test.test1
+          key: test.test1.
+
+# rabbitmq server		
+rabbitmq_publisher:
+    uri: amqp://test:test@127.0.0.1:5672/      #product
+    consumerTag: consumer
+    num: 1
+    exchange:
+        - name: test.test2
+          type: fanout
+    queue:
+        - name: test.test2
+          key: test.test2
